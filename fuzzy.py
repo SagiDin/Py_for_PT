@@ -4,7 +4,7 @@ import sys
 
 def loop():
     for word in sys.stdin:
-        res = requests.get(url=f"http://localhost:8888/{word}")
+        res = requests.get(url=f"http://localhost:8888/{word}") # change the url to your target domain
         if res.status_code == 404 or res.status_code == 400:
             loop()
         else:
