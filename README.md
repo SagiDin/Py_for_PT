@@ -22,7 +22,7 @@ Run the spider script by executing the following command:
 pip install -r requirements.txt
 python spider.py
 ```
-![(2024-03-28 16_33_30-red-kali - VMware Workstation)]
+
 Follow the prompts to input the URL you want to scrape and the keyword you want to search for.
 The script will start crawling the provided URL, searching for the specified keyword, and print the URLs containing the keyword to the console. Additionally, it will save these URLs to a file named urls.txt.
 
