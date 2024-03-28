@@ -6,7 +6,9 @@
 This python script preform Fuzz after the "/" in target URL
 1. Create your own word list in txt file 
 2. Open a terminal and run the command:
-```cat wordlist.txt | python3 fuzzy.py```
+```
+cat wordlist.txt | python3 fuzzy.py
+```
 ### Spider.py Script Description:
 **Info:**
 The spider script is a Python program designed to crawl web pages recursively starting from a given URL. It searches for URLs containing a specified keyword and prints them to the console. Additionally, it stores these URLs in a file named urls.txt. The spider script utilizes the requests library to make HTTP requests, BeautifulSoup for HTML parsing, and urljoin to resolve relative URLs. It maintains a set of visited URLs to avoid revisiting the same pages. The script is suitable for web scraping tasks where the goal is to extract URLs containing specific keywords.
