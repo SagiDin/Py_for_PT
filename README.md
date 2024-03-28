@@ -38,3 +38,4 @@ cat urls.txt | python prob.py
 ```
 This command pipes the contents of urls.txt to the prob script.
 The script will filter the URLs based on their response status codes, selecting only those with a status code of 200 or 403. It will then save the filtered URLs to a file named filtered_urls.txt.
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
