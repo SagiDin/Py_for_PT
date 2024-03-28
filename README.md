@@ -28,7 +28,7 @@ The script will start crawling the provided URL, searching for the specified key
 ### Prob Script Description:
 **Info:**
 The prob script is a Python program that filters URLs based on their response status codes. It reads a list of URLs from standard input, sends HEAD requests to each URL, and selects only those with a status code of 200 or 403. The script handles various error scenarios gracefully, such as URLs with missing schema or connection errors. It outputs the filtered URLs to a file named filtered_urls.txt. The prob script is useful for validating URLs and selecting only those that are accessible and responsive.
-**Prob Script Manual Guide:**
+>**Prob Script Manual Guide:**
 Create a file named urls.txt containing the list of URLs you want to filter. Each URL should be on a separate line.
 Open a terminal or command prompt.
 Run the prob script by executing the following command:
