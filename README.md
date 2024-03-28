@@ -7,6 +7,7 @@ This python script preform Fuzz after the "/" in target URL
 1. Create your own word list in txt file 
 2. Open a terminal and run the command:
 ```
+pip install -r requirements.txt
 cat wordlist.txt | python3 fuzzy.py
 ```
 ### Spider.py Script Description:
@@ -18,6 +19,7 @@ Clone or download the spider script (spider.py) from this repository.
 Open a terminal or command prompt.
 Run the spider script by executing the following command:
 ```
+pip install -r requirements.txt
 python spider.py
 ```
 Follow the prompts to input the URL you want to scrape and the keyword you want to search for.
@@ -31,6 +33,7 @@ Create a file named urls.txt containing the list of URLs you want to filter. Eac
 Open a terminal or command prompt.
 Run the prob script by executing the following command:
 ```
+pip install -r requirements.txt
 cat urls.txt | python prob.py
 ```
 This command pipes the contents of urls.txt to the prob script.
