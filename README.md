@@ -13,7 +13,7 @@ cat wordlist.txt | python3 fuzzy.py
 ### Spider.py Script Description:
 **Info:**
 The spider script is a Python program designed to crawl web pages recursively starting from a given URL. It searches for URLs containing a specified keyword and prints them to the console. Additionally, it stores these URLs in a file named urls.txt. The spider script utilizes the requests library to make HTTP requests, BeautifulSoup for HTML parsing, and urljoin to resolve relative URLs. It maintains a set of visited URLs to avoid revisiting the same pages. The script is suitable for web scraping tasks where the goal is to extract URLs containing specific keywords.
-**Spider Script Manual Guide:**
+>**Spider Script Manual Guide:**
 Ensure you have Python installed on your system. If not, download and install Python from the official website: [Python Downloads](https://www.python.org/downloads/).
 Clone or download the spider script (spider.py) from this repository.
 Open a terminal or command prompt.
