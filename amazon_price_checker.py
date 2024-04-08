@@ -6,8 +6,23 @@ import ssl
 import smtplib
 from datetime import datetime, timedelta
 
+good_message = """\
+    From: {}
+    To: {}
+    Subject: Hi There! From Python Bot
 
-def send_mail():
+    The price is lower than 30$, you should neet to consider to by it
+    """
+bad_message = """\
+    From: {}
+    To: {}
+    Subject: Error
+    
+    There was an error in the authentication level, Pleas check the script
+    """
+
+
+def send_mail(message):
     # Description: Sending an email using SMTP with Python
 
     smtp_server = 'smtp.gmail.com'
@@ -24,21 +39,19 @@ def send_mail():
     password = os.getenv('EMAIL_PASSWORD')  # Retrieve password from environment variable
     # Change This!
     receiver = 'thereceiveremail@gmail.com'
-    message = """\
-    From: {}
-    To: {}
-    Subject: Hi There! From Python Bot
-
-    The price is lower than 30$, you should neet to consider to by it
-    """.format(sender, receiver)
+    message = message.format(sender, receiver)
 
     context = ssl.create_default_context()
 
     # Establishing a secure SMTP connection
-    with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
-        server.login(sender, password)  # Logging in to the SMTP server
-        # Sending email
-        server.sendmail(sender, receiver, message)
+    try:
+        with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+            server.login(sender, password)  # Logging in to the SMTP server
+            # Sending email
+            server.sendmail(sender, receiver, message)
+    except Exception as e:
+        print(e)
+        send_mail(bad_message)
 
 
 # Function to calculate time until next 08:00
@@ -69,8 +82,5 @@ while on:
     driver.quit()
 
     if int(price_value) < 30:
-        send_mail()
+        send_mail(good_message)
         on = False
-
-
-
